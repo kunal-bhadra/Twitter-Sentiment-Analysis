@@ -13,12 +13,12 @@ app = dash.Dash(external_stylesheets=[
 
 
 #-- Import and clean data (importing csv into pandas)
-df = pd.read_csv("C:\Data Science\Jupyter_Workspace\Twitter_Sentiment\Data\JSONLs\\final_df.csv")
+df = pd.read_csv("C:\Data Science\GitHub Projects\Twitter-Sentiment-Analysis\\final_df.csv")
 #print(df[:5]) #printing out a sample to verify if it's correct or not
 
 # Importing the GeoJSON File
 import geojson
-with open("C:\Data Science\Jupyter_Workspace\Twitter_Sentiment\Dash Deployment\states_india.geojson") as f:
+with open("C:\Data Science\GitHub Projects\Twitter-Sentiment-Analysis\Dash Deployment\states_india.geojson") as f:
     india_states = geojson.load(f)
 
 #connecting state column to geojson with id mapping    
