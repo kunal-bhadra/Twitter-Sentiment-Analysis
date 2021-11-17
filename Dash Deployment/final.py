@@ -13,7 +13,11 @@ app = dash.Dash(external_stylesheets=[
 
 
 #-- Import and clean data (importing csv into pandas)
-df = pd.read_csv("C:\Data Science\GitHub Projects\Twitter-Sentiment-Analysis\\final_df.csv")
+path = "C:\Data Science\GitHub Projects\Twitter-Sentiment-Analysis\\final_df.csv"
+with open(path, encoding="utf8", errors='ignore') as f:
+    df = pd.read_csv(f)
+
+#df = pd.read_csv("C:\Data Science\GitHub Projects\Twitter-Sentiment-Analysis\\final_df.csv", encoding="utf8", errors='ignore')
 #print(df[:5]) #printing out a sample to verify if it's correct or not
 
 # Importing the GeoJSON File
@@ -46,11 +50,32 @@ app.layout = html.Div([
                      {"label": "March 20, 2020", "value": 20200320},
                      {"label": "March 25, 2020", "value": 20200325},
                      {"label": "March 27, 2020", "value": 20200327},
+                     {"label": "March 30, 2020", "value": 20200330},
                      {"label": "April 05, 2020", "value": 20200405},
+                     {"label": "April 14, 2020", "value": 20200414},
                      {"label": "May 01, 2020", "value": 20200501},
-                     {"label": "May 17, 2020", "value": 20200517},],
+                     {"label": "May 17, 2020", "value": 20200517},
+                     {"label": "June 08, 2020", "value": 20200608},
+                     {"label": "July 01, 2020", "value": 20200701},
+                     {"label": "September 07, 2020", "value": 20200907},
+                     {"label": "September 21, 2020", "value": 20200921},
+                     {"label": "September 30, 2020", "value": 20200930},
+                     {"label": "January 16, 2021", "value": 20210116},
+                     {"label": "March 01, 2021", "value": 20210301},
+                     {"label": "March 23, 2021", "value": 20210323},
+                     {"label": "April 01, 2021", "value": 20210401},
+                     {"label": "April 20, 2021", "value": 20210420},
+                     {"label": "April 25, 2021", "value": 20210425},
+                     {"label": "April 26, 2021", "value": 20210426},
+                     {"label": "May 01, 2021", "value": 20210501},
+                     {"label": "May 03, 2021", "value": 20210503},
+                     {"label": "May 06, 2021", "value": 20210506},
+                     {"label": "June 07, 2021", "value": 20210607},
+                     {"label": "September 01, 2021", "value": 20210901},
+                     {"label": "October 08, 2021", "value": 20211008},
+                     ],
                 multi=False,
-                value=20200320,
+                value=20200608,
                 style={'width': "100%"}
                 ),
             html.Br(),
@@ -71,11 +96,32 @@ app.layout = html.Div([
                      {"label": "March 20, 2020", "value": 20200320},
                      {"label": "March 25, 2020", "value": 20200325},
                      {"label": "March 27, 2020", "value": 20200327},
+                     {"label": "March 30, 2020", "value": 20200330},
                      {"label": "April 05, 2020", "value": 20200405},
+                     {"label": "April 14, 2020", "value": 20200414},
                      {"label": "May 01, 2020", "value": 20200501},
-                     {"label": "May 17, 2020", "value": 20200517},],
+                     {"label": "May 17, 2020", "value": 20200517},
+                     {"label": "June 08, 2020", "value": 20200608},
+                     {"label": "July 01, 2020", "value": 20200701},
+                     {"label": "September 07, 2020", "value": 20200907},
+                     {"label": "September 21, 2020", "value": 20200921},
+                     {"label": "September 30, 2020", "value": 20200930},
+                     {"label": "January 16, 2021", "value": 20210116},
+                     {"label": "March 01, 2021", "value": 20210301},
+                     {"label": "March 23, 2021", "value": 20210323},
+                     {"label": "April 01, 2021", "value": 20210401},
+                     {"label": "April 20, 2021", "value": 20210420},
+                     {"label": "April 25, 2021", "value": 20210425},
+                     {"label": "April 26, 2021", "value": 20210426},
+                     {"label": "May 01, 2021", "value": 20210501},
+                     {"label": "May 03, 2021", "value": 20210503},
+                     {"label": "May 06, 2021", "value": 20210506},
+                     {"label": "June 07, 2021", "value": 20210607},
+                     {"label": "September 01, 2021", "value": 20210901},
+                     {"label": "October 08, 2021", "value": 20211008},
+                     ],
                 multi=False,
-                value=20200517,
+                value=20210301,
                 style={'width': "100%"}
                 ),
             html.Br(),
